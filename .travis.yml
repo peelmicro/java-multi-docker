@@ -11,8 +11,8 @@ script:
 after_success:
   - docker build -t peelmicro/java-multi-client ./client
   - docker build -t peelmicro/java-multi-nginx ./nginx
-  - docker build -t peelmicro/java-multi-server ./Server
-  - docker build -t peelmicro/java-multi-worker ./Worker
+  - docker build -t peelmicro/java-multi-server ./server
+  - docker build -t peelmicro/java-multi-worker ./worker
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
