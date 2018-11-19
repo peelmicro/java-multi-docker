@@ -5,5 +5,6 @@ WORKDIR /app
 COPY ./ ./
 RUN mvn install -DskipTests
 
+EXPOSE 5000
 # Run the jar file 
 ENTRYPOINT ["java","-jar","target/server-0.0.1-SNAPSHOT.jar"]
