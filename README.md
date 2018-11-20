@@ -1,6 +1,6 @@
 ## Java version of the "Docker and Kubernetes: The Complete Guide" course - Complex solution (multi Docker containers)
 
-> source code for the .Net Core version of the "Docker and Kubernetes: The Complete Guide" course - Complex solution (multi Docker containers)
+> source code for the Java version of the "Docker and Kubernetes: The Complete Guide" course - Complex solution (multi Docker containers)
 
 ## Execute it locally using
 
@@ -40,8 +40,8 @@ Navigate to http://localhost:3050/
 - Use Docker Compose to run and relate easily different Docker Components
 - Use NIGIX Container to run the React Client App
 - Use NIGIX Container as Reverse Proxy with Java Spring Framework Web API
-- Work with different Amazon EWS service types.
-- Updload own Containers to Docker Hub and download them when deploying
+- Work with different AWS Amazon service types to deploy a multi container Docker application using AWS Elastic Beanstalk
+- Upload own Containers to Docker Hub and download them with the deployment
 - Use Travis CI for the Continuous Integration Workflow
 
 ## In order to get to know what has been developed follow the course on
