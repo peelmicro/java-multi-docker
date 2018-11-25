@@ -71,7 +71,10 @@ public class ValuesController {
         index = request.get("index").toString();
         try  
         {     
-          number = Integer.parseInt(index);  
+          number = Integer.parseInt(index); 
+          if (number > 40)  {
+            validIndex = false;
+          }
         }  
         catch(NumberFormatException nfe)  
         { 
