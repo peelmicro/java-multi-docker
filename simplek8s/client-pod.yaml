@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: java-client-pod
+  labels:
+    component: web
+spec:
+  containers:
+    - name: client
+      image: peelmicro/java-multi-client
+      ports: 
+        - containerPort: 3000

@@ -1,6 +1,6 @@
-## Java version of the "Docker and Kubernetes: The Complete Guide" course - Complex solution (multi Docker containers)
+## Java version of the "Docker and Kubernetes: The Complete Guide" course 
 
-> source code for the Java version of the "Docker and Kubernetes: The Complete Guide" course - Complex solution (multi Docker containers)
+> source code for the Java version of the "Docker and Kubernetes: The Complete Guide" course 
 
 ## Execute it locally using
 
@@ -13,12 +13,12 @@ Navigate to http://localhost:3050/
 - The repository must be created on https://github.com/
 
 - The repository must be assigned from GitHub on https://travis-ci.com/. The following setting variables must be set up:
-1) AWS_ACCESS_KEY
-2) AWS_SECRET_KEY
+1) AWS_ACCESS_KEY (for 11.-Multi-Container Deployments to AWS)
+2) AWS_SECRET_KEY (for 11.-Multi-Container Deployments to AWS)
 3) DOCKER_ID
 4) DOCKER_PASSWORD
 
-- The following instances must be created on Amazon EWS
+- The following instances must be created on Amazon (for 11.-Multi-Container Deployments to AWS)
 1) Elastic Beanstalk (EB)
 2) Relational Database Service (RDS) for Postgres
 3) ElastiCache for Redis
@@ -43,14 +43,12 @@ Navigate to http://localhost:3050/
 - Work with different AWS Amazon service types to deploy a multi container Docker application using AWS Elastic Beanstalk
 - Upload own Containers to Docker Hub and download them with the deployment
 - Use Travis CI for the Continuous Integration Workflow
+- Use Kubernetes
+- Use Minikube to run Kubernetes locally
+- Use Kubectl CLI for interacting with Kubernetes Master
+
 
 ## In order to get to know what has been developed follow the course on
 
 https://www.udemy.com/docker-and-kubernetes-the-complete-guide
 
-Sections:
-
-8) Building a Multi-Container Application
-9) "Dockerizing" Multiple Services
-10) A Continuous Integration Workflow for Multiple Images
-11) Multi-Container Deployments to AWS
