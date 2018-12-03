@@ -28,7 +28,7 @@ Navigate to http://localhost:3050/
 4) Custom Security Group
 5) Identity and Access Magagement (IAM)
 
-## Kubernetes version (From `12.-Onwards to Kubernetes!) is on the root folder:
+## Kubernetes version (From `12.-Onwards to Kubernetes!`) is on the root folder:
 ### Execute it locally 
 1. Create the `secrets` for the `postgres` password: `kubectl create secret generic pgpassword --from-literal PGPASSWORD=postgres_password`
 2. Execute the `mandatory` `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/mandatory.yaml` `Ingress Nginx` command
