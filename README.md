@@ -2,9 +2,10 @@
 
 > source code for the Java version of the "Docker and Kubernetes: The Complete Guide" course 
 
-## AWS Elastic Beanstalk version (Up to `11.-Multi-Container Deployments to AWS` section) is on the `bean-stalk` subfolder 
+## AWS Elastic Beanstalk version (Up to `11.-Multi-Container Deployments to AWS` section) is on the `elastic-beanstalk` subfolder:
 ### Execute it locally using 
 
+$ cd elastic-beanstalk
 $ docker-compose up --build
 
 Navigate to http://localhost:3050/
@@ -26,7 +27,7 @@ Navigate to http://localhost:3050/
 4) Custom Security Group
 5) Identity and Access Magagement (IAM)
 
-## Kubernetes version (From `12.-Onwards to Kubernetes!) is on the root folder
+## Kubernetes version (From `12.-Onwards to Kubernetes!) is on the root folder:
 ### Execute it locally 
 1. Create the `secrets` for the `postgres` password: `kubectl create secret generic pgpassword --from-literal PGPASSWORD=postgres_password`
 2. Execute the `mandatory` `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/mandatory.yaml` `Ingress Nginx` command
