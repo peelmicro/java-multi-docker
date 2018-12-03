@@ -6,6 +6,7 @@
 ### Execute it locally using 
 
 $ cd elastic-beanstalk
+
 $ docker-compose up --build
 
 Navigate to http://localhost:3050/
