@@ -2,14 +2,13 @@
 
 > source code for the Java version of the "Docker and Kubernetes: The Complete Guide" course 
 
-## AWS Elastic Beanstalk version (Up to `11.-Multi-Container Deployments to AWS` section) is on the `bean-stalk` subfolder 
-### Execute it locally using 
+## Execute it locally using
 
 $ docker-compose up --build
 
 Navigate to http://localhost:3050/
 
-### Continuous Integration with Travis CI + Amazon AWS
+## Continuous Integration with Travis CI + Amazon AWS
 
 - The repository must be created on https://github.com/
 
@@ -25,15 +24,6 @@ Navigate to http://localhost:3050/
 3) ElastiCache for Redis
 4) Custom Security Group
 5) Identity and Access Magagement (IAM)
-
-## Kubernetes version (From `12.-Onwards to Kubernetes!) is on the root folder
-### Execute it locally 
-1. Create the `secrets` for the `postgres` password: `kubectl create secret generic pgpassword --from-literal PGPASSWORD=postgres_password`
-2. Execute the `mandatory` `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/mandatory.yaml` `Ingress Nginx` command
-3. Enable Ingress using `minikube addons enable ingress`
-4. Install all the `Kubernetes objects` with `kubectl apply -f k8s`
-5. Get the local IP with `minikube IP`
-6. Browse to the local IP 
 
 ## Within the code you can see how to
 - Create different Docket Container Types and relate all of them
@@ -53,9 +43,10 @@ Navigate to http://localhost:3050/
 - Work with different AWS Amazon service types to deploy a multi container Docker application using AWS Elastic Beanstalk
 - Upload own Containers to Docker Hub and download them with the deployment
 - Use Travis CI for the Continuous Integration Workflow
-- Use Kubernetes to run the same multi container application
+- Use Kubernetes
 - Use Minikube to run Kubernetes locally
 - Use Kubectl CLI for interacting with Kubernetes Master
+
 
 ## In order to get to know what has been developed follow the course on
 
