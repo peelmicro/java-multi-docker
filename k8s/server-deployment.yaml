@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-  name: java-server-deployment
+  name: server-deployment
 spec:
   replicas: 3
   selector:
@@ -19,13 +19,13 @@ spec:
             - containerPort: 5000
           env:
             - name: REDIS_HOST
-              value: java-redis-cluster-ip-service
+              value: redis-cluster-ip-service
             - name: REDIS_PORT
               value: '6379'     
             - name: PGUSER
               value: postgres
             - name: PGHOST
-              value: java-postgres-cluster-ip-service
+              value: postgres-cluster-ip-service
             - name: PGDATABASE
               value: postgres
             - name: PGPORT

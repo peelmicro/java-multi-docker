@@ -5,3 +5,4 @@
 /client/node_modules
 /worker/.idea
 /server/.idea
+/service-account.json

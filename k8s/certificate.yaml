@@ -1,0 +1,20 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: k8s-multi-com-tls
+spec:
+  secretName: k8s-multi-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: peelmicro.info
+  dnsNames:
+    - peelmicro.info
+    - www.peelmicro.info
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - peelmicro.info
+          - www.peelmicro.info

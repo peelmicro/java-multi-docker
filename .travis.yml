@@ -1,0 +1,42 @@
+sudo: required
+language: node_js
+node_js: 
+  - "8"
+services:
+  - docker
+env: 
+  global:
+    # Get an unique value of the latest commit to be used to identify the images
+    - SHA=$(git rev-parse HEAD)
+    # Tell Google Cloud CLI not to display any prompts
+    - CLOUDSDK_CORE_DISABLE_PROMPTS=1
+before_install:
+  # Decrypt the encrypted Google Cloud Keys and copy locally
+  - openssl aes-256-cbc -K $encrypted_0c35eebf403c_key -iv $encrypted_0c35eebf403c_iv -in service-account.json.enc -out service-account.json -d
+  # Install the Google Cloud SDK CLI
+  - curl https://sdk.cloud.google.com | bash > /dev/null;
+  # Apply additional configuration inside Travis CI instance
+  - source $HOME/google-cloud-sdk/path.bash.inc
+  # Install kubectl
+  - gcloud components update kubectl
+  # Authentication with Google Cloud using the decrypted json key file
+  - gcloud auth activate-service-account --key-file service-account.json
+  # Select the Google Cloud project that we're going to use
+  - gcloud config set project multi-k8s-224518
+  # Select the zone where the Kubernetes Cluster is installed
+  - gcloud config set compute/zone us-central1-a
+  # Select the Google Kubernetes Cluster
+  - gcloud container clusters get-credentials multi-cluster
+  # Log in to the docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin 
+  # Build the 'test' version of multi-client
+  - docker build -t peelmicro/test-client -f ./client/Dockerfile.dev ./client
+script:
+  # Run the current test
+  - docker run peelmicro/test-client npm run test -- --coverage
+# Exceute an external script to do the deployment to Google Cloud
+deploy:
+  provider: script
+  script: bash ./deploy.sh
+  on:
+    branch: master

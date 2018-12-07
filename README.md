@@ -28,7 +28,8 @@ Navigate to http://localhost:3050/
 4) Custom Security Group
 5) Identity and Access Magagement (IAM)
 
-## Kubernetes version (From `12.-Onwards to Kubernetes!`) is on the root folder:
+## Kubernetes minkube local version (From `12.-Onwards to Kubernetes!`) is on the `multi-container-minikube` folder:
+
 ### Execute it locally 
 1. Create the `secrets` for the `postgres` password: `kubectl create secret generic pgpassword --from-literal PGPASSWORD=postgres_password`
 2. Execute the `mandatory` `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/mandatory.yaml` `Ingress Nginx` command
@@ -36,6 +37,12 @@ Navigate to http://localhost:3050/
 4. Install all the `Kubernetes objects` with `kubectl apply -f k8s`
 5. Get the local IP with `minikube IP`
 6. Browse to the local IP 
+
+## Kubernetes `Google Cloud` version (From `12.-Onwards to Kubernetes!`) is on the root folder:
+
+- The repository must be assigned from GitHub on https://travis-ci.org/. The following setting variables must be set up:
+1) DOCKER_ID
+2) DOCKER_PASSWORD
 
 ## Within the code you can see how to
 - Create different Docket Container Types and relate all of them
@@ -58,6 +65,9 @@ Navigate to http://localhost:3050/
 - Use Kubernetes to run the same multi container application
 - Use Minikube to run Kubernetes locally
 - Use Kubectl CLI for interacting with Kubernetes Master
+- Use Google Kubernetes Engine to run the Kubernetes Cluster on the Cloud
+- Run the Ruby Travis CI CLI from a Docker container locally
+- How to manage the automatic creation and renewal of a TLS certificate using Kubernetes to run the application with HTTPS
 
 ## In order to get to know what has been developed follow the course on
 
