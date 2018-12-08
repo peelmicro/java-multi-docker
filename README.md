@@ -67,7 +67,7 @@ Navigate to http://localhost:3050/
 - Use Kubectl CLI for interacting with Kubernetes Master
 - Use Google Kubernetes Engine to run the Kubernetes Cluster on the Cloud
 - Run the Ruby Travis CI CLI from a Docker container locally
-- How to manage the automatic creation and renewal of a TLS certificate using Kubernetes to run the application with HTTPS
+- Manage the automatic creation and renewal of a TLS certificate using Kubernetes to run the application with HTTPS
 
 ## In order to get to know what has been developed follow the course on
 
